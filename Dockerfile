@@ -19,7 +19,7 @@ COPY ./healthcheck /healthcheck
 # install dependencies
 RUN case ${TARGETPLATFORM} in \
       "linux/amd64")   export ARCH="amd64" ;; \
-      "linux/arm64")   export ARCH="armv8" ;; \
+      "linux/arm64")   export ARCH="arm64" ;; \
       *) echo "Unsupported TARGETPLATFORM: ${TARGETPLATFORM}" && exit 1 ;; \
     esac && \
     echo "Building for ${TARGETPLATFORM} with GOST ${GOST_VERSION}" &&\
