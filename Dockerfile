@@ -46,7 +46,7 @@ RUN case ${TARGETPLATFORM} in \
       FILE_NAME="gost-linux-${ARCH}-${GOST_VERSION}.gz"; \
     fi && \
     echo "File name: ${FILE_NAME}" && \
-    curl -LO https://github.com/ginuerzh/gost/releases/download/v${GOST_VERSION}/${FILE_NAME} && \
+    curl -LO https://github.com/go-gost/gost/releases/download/v${GOST_VERSION}/${FILE_NAME} && \
     if [ "${NAME_SYNTAX}" = "new" ]; then \
       tar -xzf ${FILE_NAME} -C /usr/bin/ gost; \
     else \
