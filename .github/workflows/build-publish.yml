@@ -28,7 +28,7 @@ jobs:
         with:
           registry: ${{ vars.REGISTRY }}
           username: ${{ vars.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get gost version
         id: get-gost-version
